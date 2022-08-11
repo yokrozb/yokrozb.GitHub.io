@@ -6,48 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kantumruy+Pro:wght@300;400&family=Lobster+Two:wght@400;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kantumruy+Pro:wght@300;400&family=Lobster+Two:wght@400;700&family=Open+Sans:wght@300&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f5b0b9ec2e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body id="orderbody">
-    <h1>Customer Information</h1>
     <form action="" id="form">
+        <h1>Customer Information</h1>
         <div class="label-input-container">
-            <label for="shop-name">Shop Name:</label><br>
+            <label for="shop-name" class="label">Shop Name:</label><br>
             <input class="blowout-input" type="text" id="'shop-name">
         </div>
         <br>
 
         <div class="label-input-container">
-            <label for="shop-name">Address:</label><br>
+            <label for="shop-name" class="label">Address:</label><br>
             <input class="blowout-input" type="text" id="'shop-address">
         </div>
         <br>
-<div class="label-input-container">
-    <label for="shop-name">License Number:</label><br>
-    <input class="blowout-input" type="text" id="'shop-license">
-</div>
+        <div class="label-input-container">
+            <label for="shop-name" class="label">License Number:</label><br>
+            <input class="blowout-input" type="text" id="'shop-license">
+        </div>
         <br>
         <div class="label-input-container">
-            <label for="shop-name">Contact Name:</label><br>
+            <label for="shop-name" class="label">Contact Name:</label><br>
             <input class="blowout-input" type="text" id="'shop-contact">
         </div>
         <br>
         <div class="label-input-container">
-            <label for="shop-name">Phone Number:</label><br>
+            <label for="shop-name" class="label">Phone Number:</label><br>
             <input class="blowout-input" type="text" id="'shop-name">
         </div>
         <br>
         <div class="label-input-container">
-            <label for="shop-email">Email:</label> <br>
+            <label for="shop-email" class="label">Email:</label> <br>
             <input class="blowout-input" type="text" name="text" id="shop-email"> <br>
 
         </div>
         <br>
         <div class="label-input-container">
-            <label for="instruction">Special Instructions:</label>
+            <label for="instruction" class="label">Special Instructions:</label>
             <br>
             <input class="blowout-input" type="text" name="" id="instructions">
         </div>
@@ -55,54 +55,148 @@
     </form>
 
     <form action="" class="flower-form">
-        <div class="strain1-container">
-            <h2 class="strain">First Class Funk - Indica/Hybrid</h2>
-            <span class="qty">7g </span>
-            <input type="number" class="qty-input">
-            <span>&times;</span> <span>$160/Case</span>
-            <br>
+        <h3 class="disclaimer">*All Case Quantities  = 16 units</h3>
 
-            <span class="qty">14g</span>
-            <input type="number" class="qty-input">
-            <span>&times;</span> <span>$256/Case</span>
-            <br>
-            <span class="qty">28g</span>
-            <input type="number" class="qty-input">
-            <span>&times;</span> <span>$520/Case</span>
+        <div class="strain1-container">
+            <h3 class="strain">First Class Funk - Indica/Hybrid</h3>
+            <div class="order-fulfilment">
+                <div class="order-ff">
+                    <span class="qty">7g </span>
+                    <input type="number" class="qty-input 7g-input" id="box1" onfocusout="calc1()">
+                    <span>&times;</span> 
+                    <span>$160/Case =</span>
+                    <span>$</span><span id="price1"></span>
+                    <br>
+                </div>
+                <br>
+                <div class="order-ff">
+                    <span class="qty">14g</span>
+                    <input type="number" class="qty-input 14g-input" id="box2" onfocusout="calc2()">
+                    <span>&times;</span> <span>$256/Case =</span>
+                    <span>$</span><span class="price2"></span>
+                </div>
+                <br>
+                <div class="order-ff">
+                    <span class="qty">28g</span>
+                    <input type="number" class="qty-input 28g-input" id="box3" onfocusout="calc3()">
+                    <span>&times;</span> <span>$520/Case =</span>
+                    <span>$</span><span class="price3"></span>
+                </div>
+
+            </div>
+
         </div>
 <br>
         <div class="strain1-container">
-            <h2 class="strain">Tropicana Cookies - Sativa/Hybrid</h2>
-            <span class="qty">7g </span>
-            <input type="number" class="qty-input">
-            <span>&times;</span> <span>$160/Case</span>
-            <br>
+            <h3 class="strain">Tropicana Cookies - Sativa/Hybrid</h3>
+            <div class="order-fulfilment">
+                <div class="order-ff">
+                    <span class="qty">7g </span>
+                    <input type="number" class="qty-input 7g-input">
+                    <span>&times;</span> 
+                    <span>$160/Case =</span>
+                    <span>$</span><span class="line-price"></span>
+                </div>
+                <br>
+                <div class="order-ff">
+                    <span class="qty">14g</span>
+                    <input type="number" class="qty-input 14g-input">
+                    <span>&times;</span> <span>$256/Case =</span>
+                    <span>$</span><span class="line-price"></span>
+                </div>
 
-            <span class="qty">14g</span>
-            <input type="number" class="qty-input">
-            <span>&times;</span> <span>$256/Case</span>
-            <br>
-            <span class="qty">28g</span>
-            <input type="number" class="qty-input">
-            <span>&times;</span> <span>$520/Case</span>
-        </div>
+                <br>
+                <div class="order-ff">
+                    <span class="qty">28g</span>
+                    <input type="number" class="qty-input 28g-input">
+                    <span>&times;</span> <span>$520/Case =</span>
+                    <span>$</span><span class="line-price"></span>
+                </div>
+            </div>
 <br>
         <div class="strain1-container">
-            <h2 class="strain">Purple Punch - Indica/Hybrid</h2>
-            <span class="qty">7g </span>
-            <input type="number" class="qty-input">
-            <span>&times;</span> <span>$160/Case</span>
-            <br>
+            <h3 class="strain">Purple Punch - Indica/Hybrid</h3>
+            <div class="order-fulfilment">
+                <div class="order-ff">
+                    <span class="qty">7g </span>
+                    <input type="number" class="qty-input 7g-input">
+                    <span>&times;</span> 
+                    <span>$160/Case =</span>
+                    <span>$</span><span class="line-price"></span>
+                </div>
+                <br>
+                <div class="order-ff">
+                    <span class="qty">14g</span>
+                    <input type="number" class="qty-input 14g-input">
+                    <span>&times;</span> <span>$256/Case =</span>
+                    <span>$</span><span class="line-price"></span>
+                </div>
 
-            <span class="qty">14g</span>
-            <input type="number" class="qty-input">
-            <span>&times;</span> <span>$256/Case</span>
-            <br>
-            <span class="qty">28g</span>
-            <input type="number" class="qty-input">
-            <span>&times;</span> <span>$520/Case</span>
-        </div>
+                <br>
+                <div class="order-ff">
+                    <span class="qty">28g</span>
+                    <input type="number" class="qty-input 28g-input">
+                    <span>&times;</span> <span>$520/Case =</span>
+                    <span>$</span><span class="line-price"></span>
+                </div>
+            </div>
+<br>
+            <div class="strain1-container">
+                <h3 class="strain">GMO - Indica/Hybrid</h3>
+                <div class="order-fulfilment">
+                    <div class="order-ff">
+                        <span class="qty">7g </span>
+                        <input type="number" class="qty-input">
+                        <span>&times;</span> 
+                        <span>$160/Case =</span>
+                        <span>$</span><span class="line-price"></span>
+
+                    </div>
+                    <br>
+                    <div class="order-ff">
+                        <span class="qty">14g</span>
+                        <input type="number" class="qty-input 14g-input">
+                        <span>&times;</span> <span>$256/Case =</span>
+                        <span>$</span><span ></span>
+                    </div>
+    
+                    <br>
+                    <div class="order-ff">
+                        <span class="qty">28g</span>
+                        <input type="number" class="qty-input 28g-input">
+                        <span>&times;</span> <span>$520/Case =</span>
+                        <span>$</span><span class="line-price"></span>
+                    </div>
+                </div>
+<br>
+                <div class="strain1-container">
+                    <h3 class="strain">Papaya Punch - Hybrid</h3>
+                    <div class="order-fulfilment">
+                        <div class="order-ff">
+                            <span class="qty">7g </span>
+                            <input type="number" class="qty-input 7g-input">
+                            <span>&times;</span> 
+                            <span>$160/Case =</span>
+                            <span>$</span><span class="line-price"></span>
+                        </div>
+                        <br>
+                        <div class="order-ff">
+                            <span class="qty">14g</span>
+                            <input type="number" class="qty-input 14g-input">
+                            <span>&times;</span> <span>$256/Case =</span>
+                            <span>$</span><span class="line-price"></span>
+                        </div>
+        
+                        <br>
+                        <div class="order-ff">
+                            <span class="qty">28g</span>
+                            <input type="number" class="qty-input 28g-input">
+                            <span>&times;</span> <span>$520/Case =</span>
+                            <span>$</span><span class="line-price"></span>
+                        </div>
+                    </div>    
 
     </form>
+    <script src="main.js"></script>
 </body>
 </html>
