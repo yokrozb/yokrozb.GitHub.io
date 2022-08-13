@@ -12,6 +12,24 @@
     <title>Document</title>
 </head>
 <body id="orderbody">
+    <nav class="nav-container">
+        <div class="main-nav-container">
+            <span class="logo-container">
+                <img src="HPLOGO.png" alt="" class="logo">
+            </span>
+            <label for="nav-checkbox">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+        </div>
+        <input type="checkbox" id="nav-checkbox">
+        <ul class="nav-list">
+            <li class="nav-item"> <a href="index.html">Home</a></li>
+            <li class="nav-item"> <a href="#">Products</a></li>
+            <li class="nav-item"> <a href="#">Contact Us</a></li>
+            <li class="nav-item"> <a href="#">Shop</a></li>
+         </ul>
+     </nav>
     <form action="" id="form">
         <h1>Customer Information</h1>
         <div class="label-input-container">
@@ -54,15 +72,16 @@
         <br>
     </form>
 
+    <!-- order fulfilment form -->
     <form action="" class="flower-form">
         <h3 class="disclaimer">*All Case Quantities  = 16 units</h3>
-
+<!-- first class funk! -->
         <div class="strain1-container">
             <h3 class="strain">First Class Funk - Indica/Hybrid</h3>
             <div class="order-fulfilment">
                 <div class="order-ff">
                     <span class="qty">7g </span>
-                    <input type="number" class="qty-input 7g-input" id="box1" onfocusout="calc1()">
+                    <input type="number" class="qty-input 7g-input" id="box1" oninput="calc1()">
                     <span>&times;</span> 
                     <span>$160/Case =</span>
                     <span>$</span><span id="price1"></span>
@@ -71,129 +90,139 @@
                 <br>
                 <div class="order-ff">
                     <span class="qty">14g</span>
-                    <input type="number" class="qty-input 14g-input" id="box2" onfocusout="calc2()">
+                    <input type="number" class="qty-input 14g-input" id="box2" oninput="calc1()">
                     <span>&times;</span> <span>$256/Case =</span>
-                    <span>$</span><span class="price2"></span>
+                    <span>$</span><span id="price2"></span>
                 </div>
                 <br>
                 <div class="order-ff">
                     <span class="qty">28g</span>
-                    <input type="number" class="qty-input 28g-input" id="box3" onfocusout="calc3()">
+                    <input type="number" class="qty-input 28g-input" id="box3" oninput="calc1()">
                     <span>&times;</span> <span>$520/Case =</span>
-                    <span>$</span><span class="price3"></span>
+                    <span>$</span><span id="price3"></span>
                 </div>
-
             </div>
-
+            <p class="total">Total: $ <span id="fcf-total"></span></p>
         </div>
 <br>
+<!-- Tropicana Cookies! -->
         <div class="strain1-container">
             <h3 class="strain">Tropicana Cookies - Sativa/Hybrid</h3>
             <div class="order-fulfilment">
                 <div class="order-ff">
                     <span class="qty">7g </span>
-                    <input type="number" class="qty-input 7g-input">
+                    <input type="number" class="qty-input 7g-input" id="box4" oninput="calc2()">
                     <span>&times;</span> 
                     <span>$160/Case =</span>
-                    <span>$</span><span class="line-price"></span>
+                    <span>$</span><span id="price4"></span>
                 </div>
                 <br>
                 <div class="order-ff">
                     <span class="qty">14g</span>
-                    <input type="number" class="qty-input 14g-input">
+                    <input type="number" class="qty-input 14g-input" id="box5" oninput="calc2()">
                     <span>&times;</span> <span>$256/Case =</span>
-                    <span>$</span><span class="line-price"></span>
+                    <span>$</span><span id="price5"></span>
                 </div>
 
                 <br>
                 <div class="order-ff">
                     <span class="qty">28g</span>
-                    <input type="number" class="qty-input 28g-input">
+                    <input type="number" class="qty-input 28g-input" id="box6" oninput="calc2()">
                     <span>&times;</span> <span>$520/Case =</span>
-                    <span>$</span><span class="line-price"></span>
+                    <span>$</span><span id="price6"></span>
                 </div>
+                <p class="total">Total: $ <span id="trop-total"></span></p>
             </div>
 <br>
+
+<!-- Purple Punch! -->
         <div class="strain1-container">
             <h3 class="strain">Purple Punch - Indica/Hybrid</h3>
             <div class="order-fulfilment">
                 <div class="order-ff">
                     <span class="qty">7g </span>
-                    <input type="number" class="qty-input 7g-input">
+                    <input type="number" class="qty-input 7g-input" id="box7" oninput="calc3()">
                     <span>&times;</span> 
                     <span>$160/Case =</span>
-                    <span>$</span><span class="line-price"></span>
+                    <span>$</span><span id="price7"></span>
                 </div>
                 <br>
                 <div class="order-ff">
                     <span class="qty">14g</span>
-                    <input type="number" class="qty-input 14g-input">
+                    <input type="number" class="qty-input 14g-input" id="box8" oninput="calc3()">
                     <span>&times;</span> <span>$256/Case =</span>
-                    <span>$</span><span class="line-price"></span>
+                    <span>$</span><span id="price8"></span>
                 </div>
 
                 <br>
                 <div class="order-ff">
                     <span class="qty">28g</span>
-                    <input type="number" class="qty-input 28g-input">
+                    <input type="number" class="qty-input 28g-input" id="box9" oninput="calc3()">
                     <span>&times;</span> <span>$520/Case =</span>
-                    <span>$</span><span class="line-price"></span>
+                    <span>$</span><span id="price9"></span>
                 </div>
+                <p class="total">Total: $ <span id="pup-total"></span></p>
             </div>
 <br>
+
+<!-- GEE EM OH! -->
             <div class="strain1-container">
                 <h3 class="strain">GMO - Indica/Hybrid</h3>
                 <div class="order-fulfilment">
                     <div class="order-ff">
                         <span class="qty">7g </span>
-                        <input type="number" class="qty-input">
+                        <input type="number" class="qty-input" id="box10" oninput="calc4()">
                         <span>&times;</span> 
                         <span>$160/Case =</span>
-                        <span>$</span><span class="line-price"></span>
+                        <span>$</span><span id="price10"></span>
 
                     </div>
                     <br>
                     <div class="order-ff">
                         <span class="qty">14g</span>
-                        <input type="number" class="qty-input 14g-input">
+                        <input type="number" class="qty-input 14g-input" id="box11" oninput="calc4()">
                         <span>&times;</span> <span>$256/Case =</span>
-                        <span>$</span><span ></span>
+                        <span>$</span><span id="price11"></span>
                     </div>
     
                     <br>
                     <div class="order-ff">
                         <span class="qty">28g</span>
-                        <input type="number" class="qty-input 28g-input">
+                        <input type="number" class="qty-input 28g-input" id="box12" oninput="calc4()">
                         <span>&times;</span> <span>$520/Case =</span>
-                        <span>$</span><span class="line-price"></span>
+                        <span>$</span><span id="price12"></span>
                     </div>
+                    <p class="total">Total: $ <span id="gmo-total"></span></p>
                 </div>
 <br>
+
+<!-- Papaya Punch -->
                 <div class="strain1-container">
                     <h3 class="strain">Papaya Punch - Hybrid</h3>
                     <div class="order-fulfilment">
                         <div class="order-ff">
                             <span class="qty">7g </span>
-                            <input type="number" class="qty-input 7g-input">
+                            <input type="number" class="qty-input 7g-input" id="box13" oninput="calc5()">
                             <span>&times;</span> 
                             <span>$160/Case =</span>
-                            <span>$</span><span class="line-price"></span>
+                            <span>$</span><span id="price13"></span>
                         </div>
                         <br>
                         <div class="order-ff">
                             <span class="qty">14g</span>
-                            <input type="number" class="qty-input 14g-input">
+                            <input type="number" class="qty-input 14g-input" id="box14" oninput="calc5()">
                             <span>&times;</span> <span>$256/Case =</span>
-                            <span>$</span><span class="line-price"></span>
+                            <span>$</span><span id="price14"></span>
                         </div>
         
                         <br>
                         <div class="order-ff">
                             <span class="qty">28g</span>
-                            <input type="number" class="qty-input 28g-input">
+                            <input type="number" class="qty-input 28g-input" id="box15" oninput="calc5()">
                             <span>&times;</span> <span>$520/Case =</span>
-                            <span>$</span><span class="line-price"></span>
+                            <span>$</span><span id="price15"></span>
                         </div>
+                        <p class="total">Total: $ <span id="pap-total"></span></p>
                     </div>    
 
     </form>
