@@ -4,7 +4,22 @@ let ham = document.querySelector('.fa-bars');
 let checkbox = document.querySelector('#nav-checkbox');
 let navbar = document.querySelector('.main-nav-container');
 let logo = document.querySelector('.logo');
+let popupBtn = document.getElementById('popup-btn');
+let btn = document.getElementById('submit-btn')
 
+
+btn.addEventListener("click", function() {
+  // e.preventDefault();
+  btn.setAttribute('class', 'submit process');
+  btn.innerHTML = 'Processing';
+  setTimeout(()=>{
+     btn.setAttribute('class', 'submit submitted');
+     btn.innerHTML = `
+     <span class="tick">&#10004;</span>
+     Submitted
+     `;
+  },3000);
+});
 
 function calc1() {
   let qty7g = parseInt(document.getElementById('box1').value) || 0;
@@ -24,6 +39,7 @@ function calc1() {
   price3.innerHTML = total28g;
 
   document.getElementById('fcf-total').innerHTML = grandTotal;
+  return grandTotal
 }
 
 function calc2() {
@@ -44,6 +60,7 @@ function calc2() {
   price6.innerHTML = total28g2;
 
   document.getElementById('trop-total').innerHTML = grandTotal2;
+  return grandTotal2;
 }
 
 function calc3() {
@@ -64,6 +81,7 @@ function calc3() {
   price9.innerHTML = total28g3;
 
   document.getElementById('pup-total').innerHTML = grandTotal3;
+  return grandTotal3;
 }
 
 function calc4() {
@@ -84,6 +102,7 @@ function calc4() {
   price12.innerHTML = total28g4;
 
   document.getElementById('gmo-total').innerHTML = grandTotal4;
+  return grandTotal4;
 }
 
 function calc5() {
@@ -104,16 +123,30 @@ function calc5() {
   price15.innerHTML = total28g5;
 
   document.getElementById('pap-total').innerHTML = grandTotal5;
+  return grandTotal5;
 }
 
+
+function formTotal() {
+  let finalTotal = document.getElementById('form-total')
+  totalForm = calc1() + calc2() + calc3() + calc4() + calc5();
+  finalTotal.innerHTML = totalForm
+  if(totalForm < 5000) {
+    finalTotal.style.color = 'red';
+  } else {
+    finalTotal.style.color = 'green'
+    btn.disabled = false;
+  }
+}
 
 // popup window on load
 window.addEventListener('load', function() {
   this.setTimeout(
     function open(event){
+      window.scrollTo(0,0)
+      // document.body.style.overflow = "hidden";
       document.querySelector('.popup').style.display = "block";
       document.querySelector('#overlay').style.display = "block";
-      
     },
     1000
   )
@@ -121,6 +154,7 @@ window.addEventListener('load', function() {
 
 // close popup window on exit click
 document.querySelector("#close-btn").addEventListener('click', function() {
+  document.body.style.overflow = "auto";
   document.querySelector(".popup").style.display = "none";
   document.querySelector('#overlay').style.display = "none";
 })
@@ -150,3 +184,6 @@ function check() {
 
 checkbox.addEventListener('click', check)
 
+popupBtn.addEventListener('click', ()=> {
+  document.body.style.overflow = 'auto';
+})
