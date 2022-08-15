@@ -596,17 +596,18 @@ transform: translateY(-.3rem);
   cursor: pointer;
   position: relative;
   padding: 10px 20px;
-  font-size: 20px;
-  width:250px;
+  font-size: 16px;
+  width:200px;
   border-radius:4px;
   background: transparent;
   color: white;
   border: 2px solid;
   transition: width 0.5s;
 }
-
+ 
 .process{
   width:300px;
+  color: white;
   box-shadow: 
      0px 1px 10px #0a990a,
     0px 2px 15px #990a0a,
@@ -619,15 +620,16 @@ transform: translateY(-.3rem);
 .process::before {
     content: ' ';
     position: absolute;
-    background-color: #3bb78f;
-background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+    color: white;
+    background-color: #3b43b7;
+background-image: linear-gradient(315deg, #3b43b7 0%, #0b1bab 74%);
     height: 100%;
     top: 0;
     left: 0;
     width: 0%;
-    animation: processing 5s;
+    animation: processing 4s;
     border-radius: 4px;
-    z-index: -1;
+    z-index: 2;
 }
 
 .tick{
@@ -639,9 +641,10 @@ background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
 }
 
 .submitted{
-  padding-left: 40px;
+  padding-left: 30px;
   animation: tick 0.6s;
-  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+  color: white !important;
+  background-image: linear-gradient(315deg, #3b43b7 0%, #0b1bab 74%);
    box-shadow: 
     0px 1px 10px #0a990a,
     0px 2px 15px #990a0a,
@@ -652,7 +655,7 @@ background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
 }
 
 
-@keyframes process{
+@keyframes processing {
   from{
     width: 0%;
   }
@@ -674,3 +677,24 @@ background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
     transform: scale(1);
   }
 }
+
+/* heading animation scroll up */
+.rtp-title{
+  animation: Slide_Up 2s ease;
+}
+
+.ctw-title {
+  animation: Slide_Up 2.3s ease;
+}
+
+@keyframes Slide_Up {
+  0% {
+      transform: translateY(250px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0px);
+      opacity: 1;
+  }
+} 
+
