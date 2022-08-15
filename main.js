@@ -5,7 +5,8 @@ let checkbox = document.querySelector('#nav-checkbox');
 let navbar = document.querySelector('.main-nav-container');
 let logo = document.querySelector('.logo');
 let popupBtn = document.getElementById('popup-btn');
-let btn = document.getElementById('submit-btn')
+let btn = document.getElementById('submit-btn');
+let finalTotal = document.getElementById('form-total')
 
 
 btn.addEventListener("click", function() {
@@ -128,16 +129,28 @@ function calc5() {
 
 
 function formTotal() {
-  let finalTotal = document.getElementById('form-total')
   totalForm = calc1() + calc2() + calc3() + calc4() + calc5();
   finalTotal.innerHTML = totalForm
   if(totalForm < 5000) {
     finalTotal.style.color = 'red';
   } else {
     finalTotal.style.color = 'green'
-    btn.disabled = false;
   }
+  return totalForm;
 }
+
+function orderCheck(totalForm) {
+if(totalForm < 5000) {
+  finalTotal.style.color = 'red';
+  minAlert.style.display = "block";
+} else {
+  btn.disabled = false;
+  finalTotal.style.color = "green"
+  minAlert.style.display = 'none';
+}
+}
+
+btn.addEventListener('click', orderCheck)
 
 // popup window on load
 window.addEventListener('load', function() {
