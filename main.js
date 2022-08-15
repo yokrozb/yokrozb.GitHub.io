@@ -148,7 +148,7 @@ window.addEventListener('load', function() {
       document.querySelector('.popup').style.display = "block";
       document.querySelector('#overlay').style.display = "block";
     },
-    1000
+    3500
   )
 });
 
