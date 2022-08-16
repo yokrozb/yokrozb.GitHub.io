@@ -139,19 +139,6 @@ function formTotal() {
   return totalForm;
 }
 
-function orderCheck(totalForm) {
-if(totalForm < 5000) {
-  finalTotal.style.color = 'red';
-  minAlert.style.display = "block";
-} else {
-  btn.disabled = false;
-  finalTotal.style.color = "green"
-  minAlert.style.display = 'none';
-}
-}
-
-btn.addEventListener('click', orderCheck)
-
 // popup window on load
 window.addEventListener('load', function() {
   this.setTimeout(
