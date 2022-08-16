@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kantumruy+Pro:wght@300;400&family=Lobster+Two:wght@400;700&family=Open+Sans:wght@300&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kantumruy+Pro:wght@300;400&family=Lobster+Two:wght@400;700&family=Montserrat:wght@300;400;500&family=Open+Sans:wght@300&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f5b0b9ec2e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
@@ -25,9 +25,9 @@
         <input type="checkbox" id="nav-checkbox">
         <ul class="nav-list">
             <li class="nav-item"> <a href="index.html">Home</a></li>
-            <li class="nav-item"> <a href="#">Products</a></li>
-            <li class="nav-item"> <a href="#">Contact Us</a></li>
-            <li class="nav-item"> <a href="#">Shop</a></li>
+            <li class="nav-item"> <a href="#products">Products</a></li>
+            <li class="nav-item"> <a href="#contact-us">Contact Us</a></li>
+            <li class="nav-item"> <a href="https://cannablecannabis.com/">Shop</a></li>
          </ul>
      </nav>
     <form action="" id="form">
@@ -74,7 +74,8 @@
 
     <!-- order fulfilment form -->
     <form action="" class="flower-form">
-        <h3 class="disclaimer">*All Case Quantities  = 16 units</h3>
+        <h2 class="order-form-title">Order Form</h2>
+        <h3 class="disclaimer-3">*All Case Quantities  = 16 units</h3>
 <!-- first class funk! -->
         <div class="strain1-container">
             <h3 class="strain">First Class Funk - Indica/Hybrid</h3>
@@ -84,7 +85,7 @@
                     <input type="number" class="qty-input 7g-input" id="box1" oninput="calc1(), formTotal()">
                     <span>&times;</span> 
                     <span>$160/Case =</span>
-                    <span>$</span><span id="price1"></span>
+                    <span>$</span><span class="price" id="price1"></span>
                     <br>
                 </div>
                 <br>
@@ -92,17 +93,20 @@
                     <span class="qty">14g</span>
                     <input type="number" class="qty-input 14g-input" id="box2" oninput="calc1(), formTotal()">
                     <span>&times;</span> <span>$256/Case =</span>
-                    <span>$</span><span id="price2"></span>
+                    <span>$</span><span id="price2" class="price" ></span>
                 </div>
                 <br>
                 <div class="order-ff">
                     <span class="qty">28g</span>
                     <input type="number" class="qty-input 28g-input" id="box3" oninput="calc1(), formTotal()">
                     <span>&times;</span> <span>$520/Case =</span>
-                    <span>$</span><span id="price3"></span>
+                    <span>$</span><span id="price3" class="price" ></span>
                 </div>
             </div>
-            <p class="total">Total: $ <span id="fcf-total"></span></p>
+            <div class="total-container">
+                <p class="total">Total: $ <span id="fcf-total"></span></p>
+            </div>
+
         </div>
 <br>
 <!-- Tropicana Cookies! -->
@@ -114,14 +118,14 @@
                     <input type="number" class="qty-input 7g-input" id="box4" oninput="calc2(), formTotal()">
                     <span>&times;</span> 
                     <span>$160/Case =</span>
-                    <span>$</span><span id="price4"></span>
+                    <span>$</span><span id="price4" class="price" ></span>
                 </div>
                 <br>
                 <div class="order-ff">
                     <span class="qty">14g</span>
                     <input type="number" class="qty-input 14g-input" id="box5" oninput="calc2(), formTotal()">
                     <span>&times;</span> <span>$256/Case =</span>
-                    <span>$</span><span id="price5"></span>
+                    <span>$</span><span id="price5" class="price" ></span>
                 </div>
 
                 <br>
@@ -129,10 +133,10 @@
                     <span class="qty">28g</span>
                     <input type="number" class="qty-input 28g-input" id="box6" oninput="calc2(), formTotal()">
                     <span>&times;</span> <span>$520/Case =</span>
-                    <span>$</span><span id="price6"></span>
+                    <span>$</span><span id="price6" class="price" ></span>
                 </div>
-                <p class="total">Total: $ <span id="trop-total"></span></p>
             </div>
+            <p class="total">Total: $ <span id="trop-total"></span></p>
 <br>
 
 <!-- Purple Punch! -->
@@ -144,14 +148,14 @@
                     <input type="number" class="qty-input 7g-input" id="box7" oninput="calc3(), formTotal()">
                     <span>&times;</span> 
                     <span>$160/Case =</span>
-                    <span>$</span><span id="price7"></span>
+                    <span>$</span><span id="price7" class="price" ></span>
                 </div>
                 <br>
                 <div class="order-ff">
                     <span class="qty">14g</span>
                     <input type="number" class="qty-input 14g-input" id="box8" oninput="calc3(), formTotal()">
                     <span>&times;</span> <span>$256/Case =</span>
-                    <span>$</span><span id="price8"></span>
+                    <span>$</span><span id="price8" class="price" ></span>
                 </div>
 
                 <br>
@@ -159,10 +163,10 @@
                     <span class="qty">28g</span>
                     <input type="number" class="qty-input 28g-input" id="box9" oninput="calc3(), formTotal()">
                     <span>&times;</span> <span>$520/Case =</span>
-                    <span>$</span><span id="price9"></span>
+                    <span>$</span><span id="price9" class="price" ></span>
                 </div>
-                <p class="total">Total: $ <span id="pup-total"></span></p>
             </div>
+            <p class="total">Total: $ <span id="pup-total"></span></p>
 <br>
 
 <!-- GEE EM OH! -->
@@ -174,7 +178,7 @@
                         <input type="number" class="qty-input" id="box10" oninput="calc4(), formTotal()">
                         <span>&times;</span> 
                         <span>$160/Case =</span>
-                        <span>$</span><span id="price10"></span>
+                        <span>$</span><span id="price10" class="price" ></span>
 
                     </div>
                     <br>
@@ -182,7 +186,7 @@
                         <span class="qty">14g</span>
                         <input type="number" class="qty-input 14g-input" id="box11" oninput="calc4(),formTotal()">
                         <span>&times;</span> <span>$256/Case =</span>
-                        <span>$</span><span id="price11"></span>
+                        <span>$</span><span id="price11" class="price" ></span>
                     </div>
     
                     <br>
@@ -190,10 +194,11 @@
                         <span class="qty">28g</span>
                         <input type="number" class="qty-input 28g-input" id="box12" oninput="calc4(), formTotal()">
                         <span>&times;</span> <span>$520/Case =</span>
-                        <span>$</span><span id="price12"></span>
+                        <span>$</span><span id="price12" class="price" ></span>
                     </div>
-                    <p class="total">Total: $ <span id="gmo-total"></span></p>
+
                 </div>
+                <p class="total">Total: $ <span id="gmo-total"></span></p>
 <br>
 
 <!-- Papaya Punch -->
@@ -205,14 +210,14 @@
                             <input type="number" class="qty-input 7g-input" id="box13" oninput="calc5(), formTotal()">
                             <span>&times;</span> 
                             <span>$160/Case =</span>
-                            <span>$</span><span id="price13"></span>
+                            <span>$</span><span id="price13" class="price" ></span>
                         </div>
                         <br>
                         <div class="order-ff">
                             <span class="qty">14g</span>
                             <input type="number" class="qty-input 14g-input" id="box14" oninput="calc5(), formTotal()">
                             <span>&times;</span> <span>$256/Case =</span>
-                            <span>$</span><span id="price14"></span>
+                            <span>$</span><span id="price14" class="price" ></span>
                         </div>
         
                         <br>
@@ -220,18 +225,37 @@
                             <span class="qty">28g</span>
                             <input type="number" class="qty-input 28g-input" id="box15" oninput="calc5(), formTotal()">
                             <span>&times;</span> <span>$520/Case =</span>
-                            <span>$</span><span id="price15"></span>
+                            <span>$</span><span id="price15" class="price" ></span>
                         </div>
-                        <p class="total">Total: $ <span id="pap-total"></span></p>
-                    </div>    
+
+                    </div>   
+                    <p class="total">Total: $ <span id="pap-total"></span></p> 
 
                     <div class="checkout">
                         <div class="checkout-amount">
-                            <span class="dollar-sign">$</span><div id="form-total"></div>
+                            <span class="dollar-sign">$</span><div id="form-total">0</div>
                         </div>
-                        <button id="submit-btn" class ='submit' type="button" disabled>Submit Order</button>
+                        <div class="alert">***$5000 Miniumum*** </div>
+                        <button id="order-btn" class ='submit' type="button" onclick="submitOrder()">Submit Order</button>
                     </div>
 
+                    <div class="disclaimer">
+                        <div class="disclaimer-1">
+                            <span>*Aug 22nd - Sep 5th</span>
+                            <br>
+                            <span>*ORDERS MUST BE SUBMITTED BY SEPTEMBER 5TH, 2022</span>
+                            <br>
+                            <span>*WHILE SUPPLIES LAST</span>
+                        </div>
+                        <div class="disclaimer-2">
+                            <span>*PAYMENT TERMS NET 14. ACCOUNTS WITH OPEN INVOICES WILL NOT BE DELIVERED UNTIL PAID IN FULL</span>
+                            <br>
+                            <span>*GBH DISTRIBUTORS, LLC C11-0000358-LIC</span>
+                        </div>
+
+                        
+
+                    </div>
 
     </form>
     <script src="main.js"></script>

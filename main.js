@@ -5,22 +5,30 @@ let checkbox = document.querySelector('#nav-checkbox');
 let navbar = document.querySelector('.main-nav-container');
 let logo = document.querySelector('.logo');
 let popupBtn = document.getElementById('popup-btn');
-let btn = document.getElementById('submit-btn');
-let finalTotal = document.getElementById('form-total')
+let btn = document.getElementById('order-btn');
+let finalTotal = document.getElementById('form-total');
+let minAlert = document.querySelector('.alert');
 
 
-btn.addEventListener("click", function() {
-  // e.preventDefault();
-  btn.setAttribute('class', 'submit process');
-  btn.innerHTML = 'Processing';
-  setTimeout(()=>{
-     btn.setAttribute('class', 'submit submitted');
-     btn.innerHTML = `
-     <span class="tick">&#10004;</span>
-     Submitted
-     `;
-  },3000);
+// popup window on load
+window.addEventListener('load', function() {
+  this.setTimeout(
+    function open(event){
+      window.scrollTo(0,0)
+      // document.body.style.overflow = "hidden";
+      document.querySelector('.popup').style.display = "block";
+      document.querySelector('#overlay').style.display = "block";
+    },
+    3500
+  )
 });
+
+// close popup window on exit click
+document.querySelector("#close-btn").addEventListener('click', function() {
+  document.querySelector(".popup").style.display = "none";
+  document.querySelector('#overlay').style.display = "none";
+})
+
 
 function calc1() {
   let qty7g = parseInt(document.getElementById('box1').value) || 0;
@@ -136,28 +144,26 @@ function formTotal() {
   } else {
     finalTotal.style.color = 'green'
   }
-  return totalForm;
 }
 
-// popup window on load
-window.addEventListener('load', function() {
-  this.setTimeout(
-    function open(event){
-      window.scrollTo(0,0)
-      // document.body.style.overflow = "hidden";
-      document.querySelector('.popup').style.display = "block";
-      document.querySelector('#overlay').style.display = "block";
-    },
-    3500
-  )
-});
-
-// close popup window on exit click
-document.querySelector("#close-btn").addEventListener('click', function() {
-  document.body.style.overflow = "auto";
-  document.querySelector(".popup").style.display = "none";
-  document.querySelector('#overlay').style.display = "none";
-})
+function submitOrder(){
+  if(totalForm < 5000) {
+    finalTotal.style.color = 'red';
+    minAlert.style.display = 'block';
+  } else {
+    minAlert.style.display = 'none';
+    finalTotal.style.color = 'green';
+    btn.setAttribute('class', 'submit process');
+    btn.innerHTML = 'Processing';
+    setTimeout(()=>{
+       btn.setAttribute('class', 'submit submitted');
+       btn.innerHTML = `
+       <span class="tick">&#10004;</span>
+       Submitted
+       `;
+    },3000);
+  }
+}
 
 
 // nav background color on scroll
@@ -183,7 +189,3 @@ function check() {
 }
 
 checkbox.addEventListener('click', check)
-
-popupBtn.addEventListener('click', ()=> {
-  document.body.style.overflow = 'auto';
-})
