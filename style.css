@@ -218,7 +218,8 @@ height: 60vh;
 }
 
 .contactinfo {
-  max-width: 50%;
+  max-width: 45%;
+  padding: 5px 8px;
 }
 
 .contact {
@@ -236,6 +237,7 @@ height: 60vh;
   width: 100%;
   display: flex;
   flex-direction: column;
+  min-width: 100%;
 }
 
 #message {
@@ -248,7 +250,7 @@ height: 60vh;
 .name-email-container {
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  min-width: 100%;
   margin: 5% auto;
   border: none;
   position: relative;
@@ -785,7 +787,7 @@ background-image: linear-gradient(315deg, #3f4cf8 0%, #0b1bab 74%);
 
 #vapes-title {
   text-align: center;
-  color: rgb(76, 76, 223);
+  color: rgb(0, 17, 255);
   margin-bottom: 1.2em;
   font-size: 16px;
   letter-spacing: 2px;
@@ -793,7 +795,7 @@ background-image: linear-gradient(315deg, #3f4cf8 0%, #0b1bab 74%);
 
 #live-resin-title {
     text-align: center;
-    color: rgb(76, 76, 223);
+    color: rgb(0, 17, 255);
     margin-bottom: 1.2em;
     font-size: 16px;
     letter-spacing: 2px;
@@ -809,7 +811,7 @@ background-image: linear-gradient(315deg, #3f4cf8 0%, #0b1bab 74%);
 text-align: center;
 display: inline-block;
 content: "";
-border-top: .2rem solid rgb(76, 76, 223);
+border-top: .2rem solid rgb(0, 17, 255);
 border-radius: 5px;
 width: 4rem;
 margin: 0 .5rem;
@@ -838,7 +840,6 @@ transform: translateY(-.3rem);
 }
 
 .caption {
-  color: rgb(76, 76, 223);
   text-align: left;
   width: 90%;
   margin: 0 auto;
