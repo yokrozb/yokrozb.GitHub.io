@@ -891,3 +891,7 @@ transform: translateY(-.3rem);
   font-size: 1.8rem;
   font-weight: 500;
 }
+
+.resin-img {
+  width: 100%;
+}
