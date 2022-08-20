@@ -81,7 +81,7 @@ color: BLACK;
 }
 
 .logo {
-width: 45%;
+width: 50%;
 padding-left: 1.25em;
 }
 
@@ -213,6 +213,7 @@ text-align: center;
 }
 
 .extract-container {
+margin-top: 50px;
 margin-bottom: 3em;
 display: flex;
 flex-direction: column;
@@ -623,6 +624,13 @@ transform: translateY(-.3rem);
   margin-bottom: 15%;
 }
 
+.flower-info {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  line-height: 24px;
+}
+
 #vc-flower {
   display: block;
   width: 100%;
@@ -842,7 +850,8 @@ transform: translateY(-.3rem);
 .caption {
   text-align: left;
   width: 90%;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
+  line-height: 24px;
 }
 
 .img-vape {
@@ -863,12 +872,11 @@ transform: translateY(-.3rem);
 
 .extract-info {
   width: 90%;
-  margin: 0 auto;
+  margin: 5% auto;
   text-align: justify;
   font-size: 16px;
   word-spacing: 2px;
-  line-height: 20px;
-  margin-bottom: 10%;
+  line-height: 24px;
 }
 
 .diamonds-img {
